@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS</title>
+</head>
+<body>
+    <h2>Penilaian Grade Mahasiswa Berdasarkan IPK</h2>
+    <label for="ipk">Masukkan IPK Mahasiswa</label>
+    <input type="number" id="ipk" step="0.01" min="0" max="4">
+    <button onclick="tentukanGrade()">Tentukan Grade</button>
+    <p id="hasil"></p>
+
+    <script>
+        function tentukanGrade(){
+            let ipk = parseFloat(document.getElementById("ipk").value)
+            let grade
+
+            // if(ipk <= 1) {
+            //     grade = "Tolol"
+            // } else if (ipk <= 2) {
+            //     grade = "Bodoh"
+            // } else if (ipk <= 3) {
+            //     grade = "Cukup"
+            // } else if (ipk <= 4) {
+            //     grade = "Baik"
+            // }
+
+            document.getElementById("hasil").innerHTML = "Grade: " + grade
+        }
+    </script>
+</body>
+</html>

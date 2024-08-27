@@ -1,0 +1,23 @@
+.container {
+    margin-top: 50px;
+}
+.title {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.input, .textarea, .select select {
+    border-color: #4a4a4a;
+    box-shadow: none;
+    border-radius: 4px;
+}
+.button.is-link {
+    background-color: #00d1b2; 
+    border-color: #00d1b2;
+}
+
+.button.is-link:hover {
+    background-color: #00b89c;
+    border-color: #00b89c;
+}

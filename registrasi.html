@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Mahasiswa</title>
+    <!-- Nyambong ke Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Nyambong ke Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="form-reg.css">
+</head>
+<body>
+
+
+    <div class="container mt-5">
+        <h1 class="title has-text-centered">Form Registrasi Mahasiswa</h1>
+        <form>
+            <div class="field">
+                <label class="label">Nama Lengkap</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Masukkan Nama Lengkap" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">NIM</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Masukkan NIM" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Alamat Email</label>
+                <div class="control">
+                    <input class="input" type="email" placeholder="Masukkan Email" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Fakultas</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Pilih Fakultas</option>
+                            <option>Teknik</option>
+                            <option>Ekonomi</option>
+                            <option>Sains</option>
+                            <option>Hukum</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Jenis Kelamin</label>
+                <div class="control">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="laki-laki" value="laki-laki">
+                        <label class="form-check-label" for="laki-laki">Laki-laki</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="perempuan" value="perempuan">
+                        <label class="form-check-label" for="perempuan">Perempuan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Tanggal Lahir</label>
+                <div class="control">
+                    <input class="input" type="date" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Alamat</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Masukkan Alamat Lengkap"></textarea>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                    <button type="reset" class="button is-light">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

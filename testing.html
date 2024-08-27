@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #00d1b2;
+            color: white;
+        }
+
+
+        .table th:nth-child(5),
+        .table td:nth-child(5) {
+            width: 200px;
+        }
+
+        .table th:nth-child(7),
+        .table td:nth-child(7) {
+            width: 600px;
+        }
+
+        .input,
+        .textarea,
+        .select select {
+            border-color: #4a4a4a;
+            box-shadow: none;
+            border-radius: 4px;
+        }
+
+        .button.is-link {
+            background-color: #00d1b2;
+            border-color: #00d1b2;
+        }
+
+        .button.is-link:hover {
+            background-color: #00b89c;
+            border-color: #00b89c;
+        }
+
+        .label {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#menu1">Menu 1</a></li>
+            <li><a href="#menu2">Menu 2</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="menu1" class="tab-pane fade in active">
+                <div class="container mt-5">
+                    <div>
+                        <h1 class="title has-text-centered">Form Registrasi Mahasiswa</h1>
+                        <h2 class="has-text-centered">Isi form di bawah ini untuk mendaftarkan data mahasiswa baru.</h2>
+                    </div>
+                    <form>
+                        <div class="field">
+                            <label class="label">Nama Lengkap</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Masukkan Nama Lengkap" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">NIM</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Masukkan NIM" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Alamat Email</label>
+                            <div class="control">
+                                <input class="input" type="email" placeholder="Masukkan Email" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Fakultas</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select>
+                                        <option>Pilih Fakultas</option>
+                                        <option>Teknik</option>
+                                        <option>Ekonomi</option>
+                                        <option>Sains</option>
+                                        <option>Hukum</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Jenis Kelamin</label>
+                            <div class="control">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="laki-laki"
+                                        value="laki-laki">
+                                    <label class="form-check-label" for="laki-laki">Laki-laki</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="perempuan"
+                                        value="perempuan">
+                                    <label class="form-check-label" for="perempuan">Perempuan</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Tanggal Lahir</label>
+                            <div class="control">
+                                <input class="input" type="date" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Alamat</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Masukkan Alamat Lengkap"></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button type="submit" class="button is-link">Submit</button>
+                            </div>
+                            <div class="control">
+                                <button type="reset" class="button is-light">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="container mt-5">
+                    <div>
+                        <h1 class="title has-text-centered">Tabel Data Mahasiswa</h1>
+                        <h2 class="has-text-centered">Berikut adalah data mahasiswa yang telah terdaftar.</h2>
+                    </div>
+                    <br>
+                    <table class="table is-bordered is-striped is-hoverable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Fakultas</th>
+                                <th>Email</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Alamat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ali Akbar</td>
+                                <td>2022001</td>
+                                <td>Teknik</td>
+                                <td>ali.akbar@example.com</td>
+                                <td>10 Januari 2000</td>
+                                <td>Jl. Merdeka No. 10, Jakarta</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Budi Santoso</td>
+                                <td>2022002</td>
+                                <td>Ekonomi</td>
+                                <td>budi.santoso@example.com</td>
+                                <td>15 Februari 1999</td>
+                                <td>Jl. Sudirman No. 5, Bandung</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Citra Lestari</td>
+                                <td>2022003</td>
+                                <td>Sains</td>
+                                <td>citra.lestari@example.com</td>
+                                <td>20 Maret 2001</td>
+                                <td>Jl. Diponegoro No. 22, Surabaya</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Dina Marlina</td>
+                                <td>2022004</td>
+                                <td>Hukum</td>
+                                <td>dina.marlina@example.com</td>
+                                <td>25 April 1998</td>
+                                <td>Jl. Thamrin No. 8, Yogyakarta</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Eka Pratama</td>
+                                <td>2022005</td>
+                                <td>Teknik</td>
+                                <td>eka.pratama@example.com</td>
+                                <td>30 Mei 2000</td>
+                                <td>Jl. Kartini No. 15, Semarang</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
