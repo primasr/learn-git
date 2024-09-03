@@ -1,0 +1,31 @@
+import { StatusBar } from 'expo-status-bar';
+import { Image, StyleSheet, Text, View} from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+      <Text style={styles.text}>BSI 2024! YES SIR</Text>
+      <Image
+        style={styles.tinyLogo}
+        source={{
+          uri: "https://i0.wp.com/umsu.ac.id/berita/wp-content/uploads/2024/02/cara-cek-mutasi-rekening-bank-syariah-indonesia-bsi-melalui-mobile-banking-dan-atm.jpg?fit=1280%2C720&ssl=1"
+        }}
+      />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tinyLogo: {
+    width: 650,
+    height: 450
+  }
+});
